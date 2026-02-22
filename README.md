@@ -17,18 +17,31 @@ A domain-specific assistant fine-tuned to provide evidence-based guidance on chi
 
 ---
 
+## Demo Video
+
+ **[Watch the demo video here]** ← *Insert YouTube link*
+
+The video walkthrough covers:
+- Dataset preparation and preprocessing
+- Model fine-tuning with LoRA
+- Hyperparameter experiments and results
+- Live Gradio UI demonstration with sample questions
+
+---
+
 ## Project Structure
 
-- [Child_Malnutrition_Assistant.ipynb](Child_Malnutrition_Assistant.ipynb) - Primary Colab notebook
-- [Child_Malnutrition_Assistant_FineTuning.ipynb](Child_Malnutrition_Assistant_FineTuning.ipynb) - Additional fine-tuning notebook
+
+- [Child_Malnutrition_Assistant_FineTuning.ipynb](Child_Malnutrition_Assistant_FineTuning.ipynb) -  fine-tuning notebook
 - [malnutrition_dataset_final.jsonl](malnutrition_dataset_final.jsonl) - Dataset (JSONL)
 - [requirements.txt](requirements.txt) - Local dependencies
 
 ---
 
 ## Problem Definition and Domain Alignment
+At least 33% of Rwandan children age 6-59 months are stunted (short for their age), 1% are wasted (thin for their height), 8% are underweight (thin for their age), and 6% are overweight (heavy for their height). Minimum acceptable diet: Only 22% of children age 6-23 months were fed a minimum acceptable diet during the previous day. Anemia: 37% of children age 6-59 months and 13% of women age 15-49 are anemic.(Health, Nutrition and Food Security | National Institute of Statistics of Rwanda) .
 
-Child malnutrition remains a critical global health challenge. This assistant targets caregivers, community health workers, and students who need quick access to accurate guidance on:
+Child malnutrition remains a critical global health challenge especially in rwandan district nyabihu. This assistant targets caregivers, community health workers, and students who need quick access to accurate guidance on:
 
 - Early signs and symptoms of malnutrition
 - Emergency interventions and referral criteria
@@ -41,11 +54,12 @@ The model is trained on a curated, domain-specific dataset to reduce generic or 
 
 ## Dataset and Preprocessing
 
-- Dataset: 135 Q and A pairs in JSONL format
-- Source file: [malnutrition_dataset_final.jsonl](malnutrition_dataset_final.jsonl)
-- Schema support: `messages`, or `question`/`answer`, or `instruction`/`response`
+- **Dataset**: 135 custom-curated Q&A pairs in JSONL format
+- **Source**: Created using WHO/UNICEF child malnutrition guidelines combined with AI-assisted generation and human validation
+- **File**: [malnutrition_dataset_final.jsonl](malnutrition_dataset_final.jsonl)
+- **Schema support**: `messages`, or `question`/`answer`, or `instruction`/`response`
 
-Preprocessing steps:
+**Preprocessing steps:**
 
 - Unicode NFKC normalization and whitespace cleanup
 - Consistent prompt formatting:
@@ -87,7 +101,7 @@ Baseline metrics are computed before fine-tuning and compared to each experiment
 
 ---
 
-## Actual Colab Execution Results
+##  Colab Execution Results
 
 Results below are from running the notebook on Google Colab (T4 GPU):
 
@@ -115,6 +129,10 @@ The notebook includes a Gradio interface for interactive testing. It loads the b
 - Training outputs are saved to Google Drive under `/content/drive/My Drive/`
 
 ---
+
+## References
+
+- [Health, Nutrition and Food Security | National Institute of Statistics of Rwanda](https://www.alpha.statistics.gov.rw/statistical-publications/health-nutrition-and-food-security)
 
 ## Usage Notes and Safety
 
