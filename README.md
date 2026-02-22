@@ -23,7 +23,6 @@ A domain-specific assistant fine-tuned to provide evidence-based guidance on chi
 - [Child_Malnutrition_Assistant_FineTuning.ipynb](Child_Malnutrition_Assistant_FineTuning.ipynb) - Additional fine-tuning notebook
 - [malnutrition_dataset_final.jsonl](malnutrition_dataset_final.jsonl) - Dataset (JSONL)
 - [requirements.txt](requirements.txt) - Local dependencies
-- [RUBRIC_COVERAGE.md](RUBRIC_COVERAGE.md) - Rubric mapping
 
 ---
 
