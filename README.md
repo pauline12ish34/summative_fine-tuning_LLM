@@ -19,7 +19,8 @@ A domain-specific assistant fine-tuned to provide evidence-based guidance on chi
 
 ## Demo Video
 
- **[Watch the demo video here]** ← *Insert YouTube link*
+ https://drive.google.com/file/d/1OX_BSNLUE8t8a2OD6jEeBFWWNem4dbyy/view?usp=drive_link
+ 
 
 The video walkthrough covers:
 - Dataset preparation and preprocessing
